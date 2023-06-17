@@ -4,10 +4,9 @@
 
 <script>
 export default {
-    name:'comp1',
-}
+  name: "Comp1",
+};
 </script>
 
 <style>
-
 </style>
