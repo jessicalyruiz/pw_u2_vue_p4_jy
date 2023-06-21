@@ -1,10 +1,10 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <!--
+  
   <Componente1/>
-  <Contador numero="123" titulo="Componente primero"/>
-   <Contador numero="456" titulo="Componente segundo"/> -->
-   <CalcuVue/>
+  <Contador v-bind:inicio="3*2" titulo="Componente primero"/>
+   <Contador  titulo="Componente segundo"/> 
+  <!-- <CalcuVue/> -->
 </template>
 
 <script>

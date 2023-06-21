@@ -1,10 +1,10 @@
 <template>
   <h3>Contador</h3>
-  <h4>{{titulo}}</h4>
-  <p>10</p>
-  Numero con props: {{numero}}
+  <h4>{{titulo || "valaor por defecto" }}</h4>
+  <h4>{{evaluarTitulo }}</h4>
+
   <p>{{num}}</p>
-  <button v-on:click="aumentar"> Aumentar</button>
+  <button @click="aumentar"> Aumentar</button>
 
 <button v-on:click="disminuir"> Disminuir</button>
   <p>{{num}} <sup>2</sup>={{num*num}}</p>
@@ -19,12 +19,21 @@
 export default {
   //name: "Contador",
   props:{
-        numero:Number,
         titulo:String,
+        inicio:{
+          type: Number,
+          required: false,
+          default:101,
+          validator(value){
+            return value >100
+          }
+          }
+        
   },
   data(){
     return{
-        num:5,
+        num:this.inicio,
+        tituloComp:'',
     }
   },
   methods:{
@@ -43,6 +52,9 @@ export default {
     obtenercuadradoComputed(){
         console.log('entro al metodo cuadrado Computed')
         return this.num*this.num
+    },
+    evaluarTitulo(){
+        return this.titulo || "valaor por defecto"
     }
   }
 };
