@@ -1,10 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  
+  <!--
   <Componente1/>
   <Contador v-bind:inicio="3*2" titulo="Componente primero"/>
    <Contador  titulo="Componente segundo"/> 
-  <!-- <CalcuVue/> -->
+   <CalcuVue/> -->
+<Pregunta/>
 </template>
 
 <script>
@@ -12,12 +12,14 @@
 import Componente1 from './components/Componente1.vue'
 import Contador from './components/Contador.vue'
 import CalcuVue from './components/CalcuVue.vue'
+import Pregunta from './components/Pregunta.vue'
 export default {
   name: 'App',
   components: {
     Componente1,
     Contador,
-    CalcuVue
+    CalcuVue,
+    Pregunta
   }
 }
 </script>
