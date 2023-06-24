@@ -63,6 +63,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+/*
 img, imagen{
 
   height: 100vh;
@@ -92,5 +93,5 @@ p,h1,h2{
 p{
   font-size: 20px;
   margin-top: 0px;
-}
+}*/
 </style>
