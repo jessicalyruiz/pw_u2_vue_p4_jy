@@ -42,11 +42,12 @@ export default {
       console.log('oldValue: '+oldValue)
       if(value.includes('?')){
         console.log('consumo el  API')
+        this.respuesta='pensando...'
        const {answer, image}= await this.consumirAPI()
        this.respuesta=answer
        this.img=image
        console.log(this.respuesta)
-
+        this.pregunta=''
       }
     }
   },
@@ -58,12 +59,13 @@ export default {
   font-family: "charlinda";
   src: url("../assets/fonts/charlinda.ttf");
 }
+/*
 .caracola {
   display: grid;
   align-items: center;
   justify-content: center;
 }
-/*
+
 img, imagen{
 
   height: 100vh;

@@ -4,10 +4,11 @@
   <Contador v-bind:inicio="3*2" titulo="Componente primero"/>
    <Contador  titulo="Componente segundo"/> 
    <CalcuVue/> 
+   <DeberAPI/>
+
 <Pregunta/>-->
 
-<DeberAPI/>
-
+<PokermonPage/>
 </template>
 
 <script>
@@ -17,6 +18,11 @@ import CalcuVue from "./components/CalcuVue.vue";
 import Pregunta from "./components/Pregunta.vue";
 
 import DeberAPI from "./components/DeberAPI.vue";
+
+
+
+import PokermonPage from './modules/pokemon/pages/PokermonPage.vue';
+
 export default {
   name: "App",
   components: {
@@ -25,6 +31,7 @@ export default {
     CalcuVue,
     Pregunta,
     DeberAPI,
+    PokermonPage,
   },
 };
 </script>
