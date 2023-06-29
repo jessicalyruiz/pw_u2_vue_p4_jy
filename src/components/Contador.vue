@@ -60,7 +60,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 button{
     margin: 0 6px;
     border-radius: 5px;

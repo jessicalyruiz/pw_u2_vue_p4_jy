@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @font-face {
   font-family: "charlinda";
   src: url("../assets/fonts/charlinda.ttf");
