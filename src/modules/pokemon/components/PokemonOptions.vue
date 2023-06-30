@@ -4,38 +4,48 @@
 
   <!--<h1>Opciones pokemon</h1>-->
   <ul>
-    <li v-on:click="jugar">1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
+    
+    <li v-for="poke in opciones" :key="poke.id">{{poke.nombre}}</li>
   </ul>
   </div>
 </template>
 
 <script>
+
 export default {
 
+props:{
+  opciones:{
+    type:Array,
+    required:true
+  }
+},
   data(){
     return{
       poke1:'',
       poke2:'',
       poke3:'',
       poke4:'',
-      pokes:[]
+      pokes:[],
+
     }
   },
   methods:{
-    generarRandom(max, min){
-        return Math.floor(Math.random*(max*min-1)+min)
-    },
-    generarIdPkemons(){
-      for(let i=0;i<4;i++){
-            this.pokes[i]=this.generarRandom(0,600)
-      }
-      console.log(this.pokes)
-    },
-    jugar(){
+     generarRandom( min, max){
+    console.log('random:')
+      return Math.floor(Math.random()*(max-min+1)+min)
+  },
+  generarIdPkemons(){
+    for(let i=0;i<4;i++){
+          this.pokes[i]=this.generarRandom(0,600)
+          console.log(this.pokes[i])
 
+    }
+    console.log(this.pokes)
+  },
+    jugar(){
+            console.log('jugar')
+            this.generarIdPkemons()
     }
   }
 }
