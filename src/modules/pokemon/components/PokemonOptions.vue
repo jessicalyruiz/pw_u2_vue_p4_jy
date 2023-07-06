@@ -5,10 +5,10 @@
   <!--<h1>Opciones pokemon</h1>-->
   <ul>
     
-   <li v-for="poke in opciones" :key="poke.id" v-on:click="$emit('pokeSelected',{idPoke:poke.id,nombre: poke.name})" >{{poke.nombre}} </li>
+   <li v-for="poke in opciones" :key="poke.id" v-on:click="$emit('pokeSelected',{idPoke:poke.id,nombre: poke.name, try:encerar?intentos=1:intentos++,points: encerar?0:puntaje+=puntaje})" >{{poke.nombre}} </li>
   </ul>
   </div>
-  <button v-on:click="$emit('mineEvent', {saludo: 'Hello', nombre: 'Jessirena'})">jugar</button>
+ <!-- <button v-on:click="$emit('mineEvent', {saludo: 'Hello', nombre: 'Jessirena'})">jugar</button>-->
 </template>
 
 <script>
@@ -19,6 +19,10 @@ props:{
   opciones:{
     type:Array,
     required:true
+  },
+  encerar:{
+    type: Boolean,
+    required: true
   }
 },
   data(){
@@ -28,6 +32,8 @@ props:{
       poke3:'',
       poke4:'',
       pokes:[],
+      intentos:1,
+      puntaje:0
 
     }
   },
