@@ -5,9 +5,10 @@
   <!--<h1>Opciones pokemon</h1>-->
   <ul>
     
-    <li v-for="poke in opciones" :key="poke.id">{{poke.nombre}}</li>
+   <li v-for="poke in opciones" :key="poke.id" v-on:click="$emit('pokeSelected',{idPoke:poke.id,nombre: poke.name})" >{{poke.nombre}} </li>
   </ul>
   </div>
+  <button v-on:click="$emit('mineEvent', {saludo: 'Hello', nombre: 'Jessirena'})">jugar</button>
 </template>
 
 <script>
@@ -31,10 +32,7 @@ props:{
     }
   },
   methods:{
-     generarRandom( min, max){
-    console.log('random:')
-      return Math.floor(Math.random()*(max-min+1)+min)
-  },
+     
   generarIdPkemons(){
     for(let i=0;i<4;i++){
           this.pokes[i]=this.generarRandom(0,600)
@@ -45,7 +43,7 @@ props:{
   },
     jugar(){
             console.log('jugar')
-            this.generarIdPkemons()
+            
     }
   }
 }
