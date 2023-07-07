@@ -1,9 +1,11 @@
 <template>
 <div>
-    <a href="/">Bienvenida</a>
-    <a href="/juego">Juego</a>
-    <a href="/premios">Premios</a>
-    <a href="/poke">Pokemon</a>
+    
+    <router-link to="/">Bienvenida</router-link>
+    <router-link to="/juego">Juego</router-link>
+    <router-link to="/premios">Premios</router-link>
+    <router-link to="/poke">Pokemon</router-link>
+    <router-link to="/jessi">Jessi</router-link>
 </div>
   
 </template>
