@@ -6,9 +6,14 @@
    <CalcuVue/> 
    <DeberAPI/>
 
-<Pregunta/>-->
+<Pregunta/>
 
-<PokermonPage/>
+<PokermonPage/>-->
+
+
+<NavBarVue/>
+<router-view/>
+
 </template>
 
 <script>
@@ -23,6 +28,9 @@ import DeberAPI from "./components/DeberAPI.vue";
 
 import PokermonPage from './modules/pokemon/pages/PokermonPage.vue';
 
+
+import NavBarVue from './modules/pokemon/components/NavBar.vue';
+
 export default {
   name: "App",
   components: {
@@ -32,6 +40,7 @@ export default {
     Pregunta,
     DeberAPI,
     PokermonPage,
+    NavBarVue
   },
 };
 </script>
