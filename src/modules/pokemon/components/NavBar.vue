@@ -3,9 +3,10 @@
     
     <router-link to="/">Bienvenida</router-link>
     <router-link to="/juego">Juego</router-link>
+    <router-link to="/jessi">Instrucciones</router-link>
     <router-link to="/premios">Premios</router-link>
     <router-link to="/poke">Pokemon</router-link>
-    <router-link to="/jessi">Jessi</router-link>
+   
 </div>
   
 </template>

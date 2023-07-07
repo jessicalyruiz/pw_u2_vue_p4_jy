@@ -1,7 +1,7 @@
 <template>
-  <h1>Bienvenida</h1>
-  <h4>Este un un jego de caracola magica</h4>
-  <img src="" alt="">
+  <h1>Bienvenidos</h1>
+  <h4>Este un un juego en el que tendrás que adivinar el pokemon</h4>
+  <img src="@/assets/pink.jpg" alt="">
 </template>
 
 <script>

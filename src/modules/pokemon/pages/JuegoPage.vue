@@ -1,5 +1,7 @@
 <template>
-  <h1>Juego</h1>
+  <h1>Juego</h1> 
+  <p>Pero antes de presentarte el juego, te dejo que adivines tu destino con la siguiente caracola mágica</p>
+  <p>Te atreves hacerle una pregunta?</p>
   <PreguntaVue/>
 </template>
 
